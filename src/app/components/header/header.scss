@@ -1,0 +1,18 @@
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-field {
+  width: 200px;
+}
+
+.spacer {
+  flex: 1;
+}

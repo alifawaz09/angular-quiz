@@ -1,0 +1,16 @@
+<div class="user-list-container">
+  <div class="user-grid">
+    <app-user-card *ngFor="let user of apiResponse?.data || []" [user]="user"></app-user-card>
+  </div>
+
+  <mat-paginator
+    [length]="(apiResponse?.total_pages || 1) * (apiResponse?.per_page || 6)"
+    [pageSize]="apiResponse?.per_page || 6"
+    [pageIndex]="(apiResponse?.page || 1) - 1"
+    (page)="onPageChange($event.pageIndex + 1)">
+  </mat-paginator>
+</div>
+
+<div class="spinner-wrapper" *ngIf="loading">
+  <mat-spinner diameter="60"></mat-spinner>
+</div>

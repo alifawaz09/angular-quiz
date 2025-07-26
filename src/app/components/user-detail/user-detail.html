@@ -1,0 +1,15 @@
+<div class="user-detail" *ngIf="!loading && !error">
+  <img [src]="user.avatar" alt="Avatar" />
+  <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+  <p>ID: {{ user.id }}</p>
+  <p>Email: {{ user.email }}</p>
+
+  <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+</div>
+
+<mat-spinner *ngIf="loading"></mat-spinner>
+
+<div *ngIf="error" class="error-msg">
+  <p>User not found or invalid ID.</p>
+  <button mat-raised-button color="primary" (click)="goBack()">Go Back</button>
+</div>

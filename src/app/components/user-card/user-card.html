@@ -1,0 +1,7 @@
+<mat-card class="user-card" (click)="goToDetails()">
+  <img mat-card-image [src]="user.avatar" alt="Avatar of {{ user.first_name }}" />
+  <mat-card-content>
+    <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+    <p>ID: {{ user.id }}</p>
+  </mat-card-content>
+</mat-card>
